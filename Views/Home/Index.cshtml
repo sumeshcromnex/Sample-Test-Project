@@ -1,0 +1,89 @@
+﻿@model Sample_Test_Project.Models.IndexpageModel;
+
+
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Title2"] = "Home Page2";
+
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            Full Name :
+        </div>
+        <div class="col-md-6">
+            @(Model.AdminModel.FirstName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Last Name:
+        </div>
+        <div class="col-md-6">
+            @(Model.AdminModel.LastName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Email Id :
+        </div>
+        <div class="col-md-6">
+            @(Model.AdminModel.Email)
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Mobile Number :
+        </div>
+        <div class="col-md-6">
+            @(Model.AdminModel.Mobile)
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <h1>User Data</h1>
+    <div class="row">
+        <div class="col-md-6">
+            Full Name :
+        </div>
+        <div class="col-md-6">
+            @(Model.UserModel.FirstName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Last Name:
+        </div>
+        <div class="col-md-6">
+            @(Model.UserModel.LastName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Email Id :
+        </div>
+        <div class="col-md-6">
+            @(Model.UserModel.Email)
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Mobile Number :
+        </div>
+        <div class="col-md-6">
+            @(Model.UserModel.Mobile)
+        </div>
+    </div>
+</div>
