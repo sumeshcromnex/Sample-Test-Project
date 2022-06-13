@@ -48,42 +48,89 @@
 
 
 
+<h1>All Users</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Age</th>
+        <th>Adult</th>
+    </tr>
+
+    @foreach (var user in Model.users)
+    {
+        var isUserIsAdult = (user.Age > 20 && user.Age < 30) ? "Adult" : "Not Adult";
+
+
+        <tr>
+            <td>@(user.FirstName) @(user.LastName)</td>
+            <td>@(user.Email)</td>
+            <td>@(user.Mobile)</td>
+            <td>@(user.Age)</td>
+            <td>@(isUserIsAdult)</td>
+        </tr>
+
+    }
+
+
+
+
+
+</table>
+
+
+
+
+<h1>Users age greater than 30</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Age</th>
+    </tr>
+
+    @foreach (var user in Model.usersAgeAbove30)
+    {
+
+
+        <tr>
+            <td>@(user.FirstName) @(user.LastName)</td>
+            <td>@(user.Email)</td>
+            <td>@(user.Mobile)</td>
+            <td>@(user.Age)</td>
+        </tr>
+
+    }
+
+
+
+
+
+</table>
+
+
+<h1>Matching email id user</h1>
 <div class="container">
-    <h1>User Data</h1>
+    
     <div class="row">
         <div class="col-md-6">
             Full Name :
         </div>
         <div class="col-md-6">
-            @(Model.UserModel.FirstName)
+            @(Model.user.FirstName) @(Model.user.LastName)
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
-            Last Name:
+            Email
         </div>
         <div class="col-md-6">
-            @(Model.UserModel.LastName)
+            @(Model.user.Email)
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            Email Id :
-        </div>
-        <div class="col-md-6">
-            @(Model.UserModel.Email)
-        </div>
 
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            Mobile Number :
-        </div>
-        <div class="col-md-6">
-            @(Model.UserModel.Mobile)
-        </div>
-    </div>
 </div>
